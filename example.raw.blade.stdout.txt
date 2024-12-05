@@ -1,0 +1,106 @@
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[CLI] [0m[38;2;000;255;255m
+
+Welcome to BLADE (Breakthrough Listen Accelerated DSP Engine)!
+Version 0.7.4 | Build Type: release | Commit: 121314b5a-dirty
+                   .-.
+    .-""`""-.    |(0 0)
+ _/`oOoOoOoOo`\_ \ \-/
+'.-=-=-=-=-=-=-.' \/ \
+  `-=.=-.-=.=-'    \ /\
+     ^  ^  ^       _H_ \ art by jgs
+    [0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[38;2;000;255;255mInstantiating new runner.[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[PIPELINE] [0m[38;2;000;255;255mPipeline with 0 accumulation and 1 compute steps.[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::GUPPI::READER] [0m[38;2;000;255;255mType: N/A -> CI8[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::GUPPI::READER] [0m[38;2;000;255;255mStep Dimensions [A, F, T, P]: N/A -> [25, 1, 524288, 2][0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::GUPPI::READER] [0m[38;2;000;255;255mStepping Time Samples First[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::GUPPI::READER] [0m[38;2;000;255;255mTotal Dimensions [A, F, T, P]: N/A -> [25, 32, 8388608, 2] (across 1 file)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::GUPPI::READER] [0m[38;2;000;255;255mSteps in Dimensions [A, F, T, P]: [1, 32, 16, 1][0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::GUPPI::READER] [0m[38;2;000;255;255mRounded down to multiple of 4 time steps[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::GUPPI::READER] [0m[38;2;000;255;255mInput File Path: /mnt/buf0/vla_target/GUPPI/23B-169.sb44907755.eb44921564.60295.44951556713.34.1.AC.C416.0021.raw[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::GUPPI::READER] [0m[38;2;000;255;255mStarting Julian Date: 2460296.01854892[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::BFR5] [0m[38;2;000;255;255mInput File Path: /mnt/buf0/vla_target/GUPPI/23B-169.sb44907755.eb44921564.60295.44951556713.34.1.AC.C416.0021.bfr5[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::BFR5] [0m[38;2;000;255;255mData Dimensions [B, A, F, T, P]: N/A -> [1, 25, 448, 448, 2][0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[38;2;000;255;255mChannelizer gathers T=1.[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[38;2;000;255;255mInstantiating new runner.[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[PIPELINE] [0m[38;2;000;255;255mPipeline with 1 accumulation and 1 compute steps.[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::CAST] [0m[38;2;000;255;255mType: CI8 -> CF32[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::CAST] [0m[38;2;000;255;255mDimensions [A, F, T, P]: [25, 1, 524288, 2] -> [25, 1, 524288, 2][0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::CHANNELIZER] [0m[38;2;000;255;255mType: CF32 -> CF32[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::CHANNELIZER] [0m[38;2;000;255;255mDimensions [A, F, T, P]: [25, 1, 524288, 2] -> [25, 524288, 1, 2][0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::CHANNELIZER] [0m[38;2;000;255;255mFFT Size: 524288[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::CHANNELIZER] [0m[38;2;000;255;255mFFT Backend: cuFFT[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::POLARIZER] [0m[38;2;000;255;255mBypass: Enabled[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::POLARIZER] [0m[38;2;000;255;255mType: CF32 -> CF32[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::POLARIZER] [0m[38;2;000;255;255mDimensions [A, F, T, P]: [25, 524288, 1, 2] -> [25, 524288, 1, 2][0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[38;2;000;255;255mBeamformer gathers T=4.[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[38;2;000;255;255mInstantiating new runner.[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[PIPELINE] [0m[38;2;000;255;255mPipeline with 4 accumulation and 1 compute steps.[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::CHANNELIZER] [0m[38;2;000;255;255mType: CF32 -> CF32[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::CHANNELIZER] [0m[38;2;000;255;255mDimensions [A, F, T, P]: [25, 524288, 4, 2] -> [25, 524288, 4, 2][0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::CHANNELIZER] [0m[38;2;000;255;255mFFT Size: 1[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::CHANNELIZER] [0m[38;2;000;255;255mFFT Backend: Bypass[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::POLARIZER] [0m[38;2;000;255;255mBypass: Enabled[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::POLARIZER] [0m[38;2;000;255;255mType: CF32 -> CF32[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::POLARIZER] [0m[38;2;000;255;255mDimensions [A, F, T, P]: [25, 524288, 4, 2] -> [25, 524288, 4, 2][0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255mType: N/A -> CF32[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255mDelays Negated: 0[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255mBottom Frequency (Hz): 24149900000[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255mChannel Bandwidth (Hz): 1000000[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255mReference Antenna Index: 0[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255mArray Reference Position (LON, LAT, ALT): (-1.8782845559018084, 0.594783968395612, 2124)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255mBoresight Coordinate (RA, DEC): (2.2614718356, -0.0120951317)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255mECEF Antenna Positions (X, Y, Z):[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    0: (-1601222.2767076835, -5042017.300588203, 3554821.3358993195)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    1: (-1601137.9996876835, -5041982.198938202, 3554908.1212993194)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    2: (-1600908.7286076834, -5042160.656138202, 3554759.4966993197)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    3: (-1601025.9518076836, -5042086.686038203, 3554811.3297993196)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    4: (-1601273.0445076835, -5042020.065908202, 3554794.7854993194)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    5: (-1601146.1714476836, -5042035.222938202, 3554829.9199993196)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    6: (-1601149.6184076834, -5042057.587038202, 3554796.9437993197)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    7: (-1601125.9304076836, -5041903.793138202, 3555023.4192993194)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    8: (-1601182.4095076835, -5042015.124128202, 3554842.1855993196)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    9: (-1601334.1567076836, -5042023.393838203, 3554762.8808993194)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    10: (-1600759.0603076834, -5042254.121238202, 3554692.9344993196)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    11: (-1601142.7843726836, -5042012.903354202, 3554862.8896993194)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    12: (-1601107.2247076835, -5042035.382038202, 3554847.1867993195)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    13: (-1601112.7741076834, -5041818.569838203, 3555148.8684993195)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    14: (-1601096.6284076835, -5041713.787038202, 3555303.0108993193)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    15: (-1601071.5016076835, -5042057.919238202, 3554831.4333993196)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    16: (-1601404.3435076836, -5042027.257238203, 3554726.2001993195)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    17: (-1600673.0855076835, -5042307.940338203, 3554654.6374993194)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    18: (-1601119.7559076836, -5041863.741638202, 3555082.3662993195)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    19: (-1601105.0834076835, -5041768.576138202, 3555222.4323993195)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    20: (-1601667.1652076836, -5042041.677938202, 3554588.8470993196)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    21: (-1600971.5965076836, -5042121.000138203, 3554787.2806993197)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    22: (-1601483.5212076835, -5042031.583238202, 3554684.8155993195)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    23: (-1600837.7296076836, -5042205.141638203, 3554727.9417993193)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    24: (-1601571.2200076836, -5042036.409038202, 3554638.9938993193)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255mBeam Coordinates (RA, DEC):[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR] [0m[38;2;000;255;255m    0: (2.261615098026772, -0.012211370644503524)[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR::ATA] [0m[38;2;000;255;255mCoefficient Dimensions [A, F, T, P]: [25, 32, 1, 2][0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR::ATA] [0m[38;2;000;255;255mPhasors Dimensions [B, A, F, T, P]: N/A -> [1, 25, 524288, 1, 2][0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::PHASOR::ATA] [0m[38;2;000;255;255mDelays Dimensions [B, A]: N/A -> [1, 25][0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::BEAMFORMER] [0m[38;2;000;255;255mType: CF32 -> CF32[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::BEAMFORMER] [0m[38;2;000;255;255mPhasors Dimensions [B, A, F, T, P]: [1, 25, 524288, 1, 2][0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::BEAMFORMER] [0m[38;2;000;255;255mEnable Incoherent Beam: YES[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::BEAMFORMER] [0m[38;2;000;255;255mEnable Incoherent Beam Square Root: YES[0m
+[1mBLADE [0m[1m[WARN]  [0m[1m| [0m[1m[M::BEAMFORMER::ATA] [0m[38;2;255;255;000mBest performance is achieved when the block size (4, 1, 1) is a multiple of 32.[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::BEAMFORMER::ATA] [0m[38;2;000;255;255mDimensions [A, F, T, P]: [25, 524288, 4, 2] -> [2, 524288, 4, 2][0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::DETECTOR] [0m[38;2;000;255;255mIntegration Procedure: Blockwise[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::DETECTOR] [0m[38;2;000;255;255mType: CF32 -> F32[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::DETECTOR] [0m[38;2;000;255;255mDimensions [A, F, T, P]: [2, 524288, 4, 2] -> [2, 524288, 4, 1][0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::DETECTOR] [0m[38;2;000;255;255mIntegration Size: 1[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::DETECTOR] [0m[38;2;000;255;255mKernel operation: ATPF_1pol[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[38;2;000;255;255mInstantiating new runner.[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[PIPELINE] [0m[38;2;000;255;255mPipeline with 4 accumulation and 1 compute steps.[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::DEDOPPLER] [0m[38;2;000;255;255mDimensions [A, F, T, P]: [2, 524288, 16, 1] -> N/A[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::DEDOPPLER] [0m[38;2;000;255;255mCoarse Channel Rate: 524288[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::DEDOPPLER] [0m[38;2;000;255;255mChannel Bandwidth: 1.9073486328125 Hz[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::DEDOPPLER] [0m[38;2;000;255;255mChannel Timespan: 0.524288 s[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::DEDOPPLER] [0m[38;2;000;255;255mDrift Rate Range: [0, 50] Hz/s[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::DEDOPPLER] [0m[38;2;000;255;255mSNR Threshold: 8[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::SETICORE::HITS_STAMP_WRITER] [0m[38;2;000;255;255mType: CF32 -> N/A[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::SETICORE::HITS_STAMP_WRITER] [0m[38;2;000;255;255mDimensions [A, F, T, P]: [25, 524288, 16, 2] -> N/A[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[M::SETICORE::HITS_STAMP_WRITER] [0m[38;2;000;255;255mOutput File Path: /mnt/buf0/vla_target/GUPPI/23B-169.sb44907755.eb44921564.60295.44951556713.34.1.AC.C416.0021.raw[0m
+[1mBLADE [0m[1m[INFO]  [0m[1m| [0m[1m[CLI] [0m[38;2;000;255;255mSetup and processing finished in 96218 milliseconds![0m
